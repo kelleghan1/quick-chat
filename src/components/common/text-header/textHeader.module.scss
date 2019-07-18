@@ -1,0 +1,15 @@
+@import '../../../styles/_mixins';
+@import '../../../styles/_variables';
+
+.text-header {
+  padding: $spacing-y 0;
+
+  &.light {
+    color: $font-light
+  }
+
+  &.border {
+    border-bottom: 1px solid $grey;
+    margin-bottom: $spacing-y;
+  }
+}

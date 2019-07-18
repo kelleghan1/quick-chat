@@ -1,0 +1,26 @@
+@import '../../../styles/_variables';
+
+.spacer {
+  margin: 0 $spacing-x;
+  padding: $spacing-y 0;
+
+  &.large-x {
+    margin-left: $spacing-y-large;
+    margin-right: $spacing-x-large;
+  }
+
+  &.large-y {
+    padding-left: $spacing-y-large;
+    padding-right: $spacing-y-large;
+  }
+
+  &.no-x {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &.no-y {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

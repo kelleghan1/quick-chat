@@ -1,0 +1,27 @@
+@import '../../../styles/_mixins';
+@import '../../../styles/_variables';
+
+.header {
+  background-color: $blue-dark;
+
+  .inner-header {
+    height: 30px;
+    
+    .logo-wrapper {
+      @include type-style;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+
+      a {
+        font-size: 20px;
+        color: $font-light;
+      }
+    }
+    
+    .user-menu {
+      float: right;
+      display: flex;
+    }
+  }
+}

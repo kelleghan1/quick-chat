@@ -1,0 +1,116 @@
+@import './_variables';
+
+@mixin type-style {
+  color: $font-dark;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.light {
+    font-weight: 100;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+@mixin article {
+  @include type-style;
+  line-height: 20px;
+  margin-bottom: $spacing-y;
+}
+
+@mixin ul-style {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin input-style {
+  @include type-style;
+  border: 1px solid $grey-light;
+  padding: $input-spacing-y $input-spacing-x;
+  box-sizing: border-box;
+
+  &[type=submit] {
+    cursor: pointer;
+
+    &.dark {
+      border: 1px solid $grey-dark;
+      background-color: $grey-dark;
+      color: $font-light;
+  
+      &:hover {
+        background-color: $grey-light;
+        color: $font-dark;
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+      border: 1px solid $grey-light;
+      background-color: $grey-light;
+      color: $font-light;
+
+      &:hover {
+        background-color: $grey-light;
+        color: $font-light;
+      }
+    }
+  }
+
+  &.left-spacing {
+    margin-left: $input-spacing-x;
+  }
+
+  &.bottom-spacing {
+    margin-bottom: $input-spacing-y;
+  }
+}
+
+@mixin button-style {
+  @include input-style;
+  background-color: white;
+  border: 1px solid $grey;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grey-light;
+    color: $font-dark;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: $grey-light;
+  }
+
+  &.submit {
+    background-color: $blue-dark;
+
+    &:hover {
+      background-color: $blue-light;
+      color: $font-dark;
+    }
+  }
+
+  &.border-radius {
+    border-radius: $border-radius;
+  }
+}
+
+@mixin h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+@mixin h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+@mixin h3 {
+  margin: 0;
+  font-size: 16px;
+}

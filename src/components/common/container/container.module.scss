@@ -1,0 +1,18 @@
+@import '../../../styles/_variables';
+
+.container {
+  max-width: $width-main;
+  margin: 0 auto;
+
+  &.grey {
+    background-color: $grey;
+  }
+
+  &.grey-light {
+    background-color: $grey-light;
+  }
+
+  &.white {
+    background-color: $white;
+  }
+}
