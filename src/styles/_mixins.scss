@@ -34,19 +34,19 @@
   padding: $input-spacing-y $input-spacing-x;
   box-sizing: border-box;
 
+  &.dark {
+    border: 1px solid $grey-dark;
+    background-color: $grey-dark;
+    color: $font-light;
+
+    &:hover {
+      background-color: $grey-light;
+      color: $font-dark;
+    }
+  }
+
   &[type=submit] {
     cursor: pointer;
-
-    &.dark {
-      border: 1px solid $grey-dark;
-      background-color: $grey-dark;
-      color: $font-light;
-  
-      &:hover {
-        background-color: $grey-light;
-        color: $font-dark;
-      }
-    }
 
     &:disabled {
       cursor: default;
@@ -75,6 +75,26 @@
   background-color: white;
   border: 1px solid $grey;
   cursor: pointer;
+
+  &.blue {
+    background-color: $blue-dark;
+    color: $white;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &.red {
+    background-color: $red-dark;
+    color: $font-light;
+
+    &:hover {
+      background-color: $red-light;
+      color: $font-light;
+    }
+  }
 
   &:hover {
     background-color: $grey-light;

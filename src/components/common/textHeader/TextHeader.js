@@ -6,8 +6,7 @@ class TextHeader extends PureComponent {
   getHeader = () => {
     const {
       children,
-      size,
-      light
+      size
     } = this.props
 
     const sizeMap = {
@@ -23,7 +22,6 @@ class TextHeader extends PureComponent {
     let className = styles['text-header']
 
     if (this.props.border) className += ` ${styles['border']}`
-    if (this.props.light) className += ` ${styles['light']}`
 
     return (
       <div className={className}>

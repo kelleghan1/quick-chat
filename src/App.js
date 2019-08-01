@@ -1,9 +1,9 @@
 import React from 'react';
 import './app.scss'
 import ChatProvider from './components/providers/ChatProvider'
-import QuickChatClient from 'interview-client'
 import Header from './components/application/header/Header'
 import Home from './components/routes/home/Home'
+import Room from './components/routes/room/Room'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 const App = () => (
@@ -15,6 +15,11 @@ const App = () => (
           component={Home}
           exact
           path='/'
+        />
+        <Route
+          component={Room}
+          exact
+          path='/room/:conversationId/:displayName'
         />
       </Switch>
     </ChatProvider>

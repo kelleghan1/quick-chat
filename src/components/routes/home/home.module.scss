@@ -1,0 +1,20 @@
+@import '../../../styles/_variables';
+@import '../../../styles/_mixins';
+
+.error {
+  text-align: center;
+  color: $red-dark;
+  font-style: italic;
+}
+
+.form-wrapper {
+  width: 350px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .history {
+    max-height: 300px;
+    overflow: auto;
+    border: 1px solid black;
+  }
+}

@@ -1,8 +1,11 @@
 @import '../../../styles/_variables';
 
 .container {
+  width: 100%;
   max-width: $width-main;
   margin: 0 auto;
+  flex-grow: 1;
+  position: relative;
 
   &.grey {
     background-color: $grey;

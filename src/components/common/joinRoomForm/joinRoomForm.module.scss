@@ -1,0 +1,31 @@
+@import '../../../styles/_mixins';
+@import '../../../styles/_variables';
+
+.error {
+  text-align: center;
+  color: $red-dark;
+  font-style: italic;
+
+  &.visible {
+    visibility: visible;
+  }
+}
+
+.join-room-form {
+  border: 1px solid $grey;
+
+  label {
+    display: block;
+    font-size: 12px;
+
+    span {
+      font-style: italic;
+      color: $red-dark;
+    }
+  }
+
+  input {
+    @include input-style;
+    width: 100%;
+  }
+}

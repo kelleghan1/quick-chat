@@ -1,0 +1,24 @@
+@import '../../../styles/_mixins';
+@import '../../../styles/_variables';
+
+.input-wrapper {
+  display: flex;
+
+  label {
+    display: none;
+  }
+
+  input {
+    @include input-style;
+
+    &.message-input {
+      flex-grow: 1;
+    }
+    
+    &.send-button {
+      &[type=submit] {
+        flex-shrink: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../../styles/_mixins';
+@import '../../../styles/_variables';
+
+.item-wrapper {
+  width: 100%;
+  overflow: auto;
+
+  .message-item,
+  .event-item {
+    @include type-style;
+    width: 70%;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+
+  .message-item {
+    background-color: $silver;
+
+    &.outgoing {
+      float: right;
+      background-color: $blue-light;
+    }
+
+    .user {
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+      margin-bottom: $input-spacing-y;
+    }
+  }
+
+  .event-item {
+    margin: 0 auto;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+  }
+}
