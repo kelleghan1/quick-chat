@@ -46,10 +46,6 @@ export default class PrivateRoute extends Component {
 }
 
 PrivateRoute.propTypes = {
-  entitledRoles: PropTypes.arrayOf(PropTypes.string.isRequired),
   protectedComponent: PropTypes.func.isRequired
 }
 
-PrivateRoute.defaultProps = {
-  entitledRoles: []
-}

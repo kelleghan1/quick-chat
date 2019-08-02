@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom'
 export default class Header extends Component {
   static contextType = ChatContext;
 
-  state = {}
-
   handleLogout = () => {
     this.context.logout()
   }

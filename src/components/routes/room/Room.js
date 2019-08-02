@@ -17,6 +17,12 @@ export default class Room extends Component {
     }
   }
 
+  componentDidMount() {
+    if (this.listWrapper) {
+      this.listWrapper.scrollTo(0, this.listWrapper.scrollHeight)
+    }
+  }
+
   render() {
     const {
       displayName,

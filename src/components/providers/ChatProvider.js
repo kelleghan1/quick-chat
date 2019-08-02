@@ -90,7 +90,7 @@ class ChatProvider extends Component {
 
     })
 
-    this.client.on('message-added', (data) => {
+    this.client.on('message-added', data => {
       this.addToHistory(
         this.getHistoryObj(data, 'message')
       )
@@ -104,7 +104,7 @@ class ChatProvider extends Component {
       }
     })
 
-    this.client.on('member-left', (data) => {
+    this.client.on('member-left', data => {
       this.addToHistory(
         this.getHistoryObj(`${data} left the conversation`, 'event')
       )
