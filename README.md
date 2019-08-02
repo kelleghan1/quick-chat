@@ -20,11 +20,11 @@ in the project directory.
 
 * The SDK was originally built for a node environment so I modified the websocket constructor for use in the browser.
 
-* In order to allow for the user to view 10 messages prior to joining a room the join room needed to be separated from the initial connection. The server also needed to be modified to allow for a user that has not joined a room to retrieve messages for a room.
+* In order to allow for the user to view 10 messages prior to joining a room the join-room action needed to be separated from the initial connection. The server also needed to be modified to allow for a user that has not joined a room to retrieve messages for a room.
 
 * I added a getMessages method to the QuickChatClient constructor.
 
-* The SDK is imported into the project as a node module through the package.json from the local_modules folder.
+* The SDK is packed and imported into the project as a node module through the package.json from local_modules/interview-client/interview-client-1.0.0.tgz. 
 
 * Created with create-react-app.
 
