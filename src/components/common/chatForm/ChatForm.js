@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import styles from './chatForm.module.scss'
 import Spacer from '../spacer/Spacer'
