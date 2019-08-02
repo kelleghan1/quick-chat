@@ -4,7 +4,7 @@ To install node modules for both the client and server, run `npm install` in the
 
 To start the servers for both the client and server, run `npm run dev` in the project directory.
 
-In a browser, navigate to http://localhost:3000/
+In a browser, navigate to http://localhost:3000/ (This should open automatically)
 
 To test, run `npm run test` in the project directory.
 
