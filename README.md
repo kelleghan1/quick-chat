@@ -1,15 +1,17 @@
 ## Twilio Quick Chat
 
 To install node modules for both the client and server, run:
-### `npm install`
+`npm install`
 in the project directory.
 
 To start the servers for both the client and server, run:
-### `npm run dev`
+`npm run dev`
 in the project directory.
 
+In a browser, navigate to http://localhost:3000/
+
 To test, run:
-### `npm run test`
+`npm run test`
 in the project directory.
 
 ## Notes
@@ -24,4 +26,12 @@ in the project directory.
 
 * The SDK is imported into the project as a node module through the package.json from the local_modules folder.
 
+* Created with create-react-app.
+
+* Utilizes the React Context API.
+
+* Utilizes SCSS modules to scramble classnames.
+
 * Enzyme was included for component testing.
+
+* Utilizes Concurrently to start server and client in parallel.
