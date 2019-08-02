@@ -48,6 +48,8 @@ function QuickChatClient(displayName, conversationId) {
 
     this.emit('connected')
 
+    // Removed to separate getting messages and joining room 
+
     // sendObject({
     // command: 'join-conversation',
     //   args: {
