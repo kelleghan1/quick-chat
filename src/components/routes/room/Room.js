@@ -13,7 +13,6 @@ export default class Room extends Component {
 
   componentDidUpdate() {
     if (this.listWrapper) {
-      console.log(this.listWrapper.scrollHeight)
       this.listWrapper.scrollTo(0, this.listWrapper.scrollHeight)
     }
   }

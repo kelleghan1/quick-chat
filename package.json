@@ -9,11 +9,13 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "postinstall": "cd server && npm install",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "server": "node-env-run server --exec nodemon",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "dev": "concurrently \"npm run start\" \"node server/server.js\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,7 +33,9 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^4.1.1",
     "express": "^4.17.1",
+    "interview-client": "file:local_modules/interview-client/interview-client-1.0.0.tgz",
     "jsonwebtoken": "^8.5.0",
     "node-env-run": "^3.0.2",
     "node-sass": "^4.12.0",

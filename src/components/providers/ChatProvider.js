@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Loading from '../common/loading/Loading'
 import { withRouter } from 'react-router-dom'
-import QuickChatClient from './index.js'
+import QuickChatClient from 'interview-client'
 
 export const ChatContext = React.createContext()
 
@@ -44,7 +44,7 @@ class ChatProvider extends Component {
         displayName: null,
         error: null,
         chatHistory: [],
-        isloggedIn: false
+        isLoggedIn: false
       },
       () => {
         this.props.history.push('/')
