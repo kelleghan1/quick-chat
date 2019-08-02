@@ -222,4 +222,4 @@ QuickChatClient.prototype.removeMember = function removeMember(name) {
   });
 };
 
-export default QuickChatClient;
+module.exports = QuickChatClient;
