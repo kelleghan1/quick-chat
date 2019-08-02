@@ -15,7 +15,7 @@
     "server": "node-env-run server --exec nodemon",
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "dev": "concurrently \"npm run start\" \"node server/server.js\""
+    "dev": "concurrently \"npm run start\" \"npm run server\""
   },
   "eslintConfig": {
     "extends": "react-app"
