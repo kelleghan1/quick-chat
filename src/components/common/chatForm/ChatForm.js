@@ -65,8 +65,4 @@ class MessageList extends Component {
   }
 }
 
-MessageList.propTypes = {
-  children: PropTypes.bool
-}
-
 export default MessageList
