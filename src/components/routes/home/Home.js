@@ -16,6 +16,10 @@ export default class Home extends PureComponent {
     error: this.context.error
   }
 
+  componentDidMount() {
+    this.context.displayName && this.context.logout()
+  }
+
   requestRoom = (displayName, conversationId) => {
     this.context.requestRoom(displayName, conversationId)
   }

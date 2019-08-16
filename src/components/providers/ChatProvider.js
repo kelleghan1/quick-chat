@@ -2,7 +2,8 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Loading from '../common/loading/Loading'
 import { withRouter } from 'react-router-dom'
-import QuickChatClient from 'interview-client'
+// import QuickChatClient from 'interview-client'
+import QuickChatClient from './index'
 
 export const ChatContext = React.createContext()
 
@@ -17,10 +18,12 @@ class ChatProvider extends Component {
     super()
 
     this.state = {
+      authenticate: this.authenticate,
+      chatHistory: [],
       clearUser: this.clearUser,
       conversationId: null,
       displayName: null,
-      chatHistory: [],
+      isAuthenticated: false,
       isLoading: false,
       isLoggedIn: false,
       joinRoom: this.joinRoom,
@@ -37,11 +40,16 @@ class ChatProvider extends Component {
     this.setState({ chatHistory: newHistory })
   }
 
+  authenticate = () => {
+    this.client.authenticate()
+  }
+
   clearUser = callback => {
     this.setState(
       {
         conversationId: null,
         displayName: null,
+        isAuthenticated: false,
         error: null,
         chatHistory: [],
         isLoggedIn: false
@@ -55,6 +63,12 @@ class ChatProvider extends Component {
 
   createClient = (displayName, conversationId) => {
     this.client = new QuickChatClient(displayName, conversationId)
+
+    this.client.on('authenticated', () => {
+      this.setState({
+        isAuthenticated: true
+      })
+    })
 
     this.client.on('connected', () => {
       this.client.getMessages()
@@ -87,7 +101,6 @@ class ChatProvider extends Component {
           this.props.history.push(`/room/${conversationId}/${displayName}`)
         }
       )
-
     })
 
     this.client.on('message-added', data => {
@@ -142,6 +155,10 @@ class ChatProvider extends Component {
 
   parseHistory = history =>
     history.map(item => this.getHistoryObj(item, 'message'))
+
+  removeMember = () => {
+    this.client.removeMember()
+  }
 
   requestRoom = (displayName, conversationId) => {
     this.setState({ isLoading: true },

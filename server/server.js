@@ -228,6 +228,8 @@ wsServer.on('request', (req) => {
           }
 
           let member = conversation.members.get(data.args.name);
+          console.log('****', member)
+          console.log('****', conversation)
           if (member) {
             removeClientFromConversation(data.args.name, conversation);
           } else {

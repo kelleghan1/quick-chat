@@ -13,8 +13,12 @@ export default class Header extends Component {
     this.context.logout()
   }
 
+  handleAuthenticate = () => {
+    this.context.authenticate()
+  }
+
   render() {
-    const { displayName, isLoggedIn } = this.context
+    const { displayName, isLoggedIn, isAuthenticated } = this.context
 
     return (
       <div className={`${styles['header']}`}>
@@ -24,6 +28,7 @@ export default class Header extends Component {
               <div className={`${styles['logo-wrapper']} ${styles['bold']}`}>
                 <Link to='/'>
                   Quick Chat
+                  {isAuthenticated && ' - Authenticated'}
                 </Link>
               </div>
               {
@@ -34,6 +39,19 @@ export default class Header extends Component {
                     text={`Log out ${displayName}`}
                     height={'30px'}
                   />
+                  {
+                    !isAuthenticated &&
+                    <Spacer
+                      noRight
+                      inline
+                    >
+                      <Button
+                        onClick={this.handleAuthenticate}
+                        text={`Authenticate ${displayName}`}
+                        height={'30px'}
+                      />
+                    </Spacer>
+                  }
                 </div>
               }
             </div>
